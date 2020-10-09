@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Exercise</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Face -->
+    <style>
+        @font-face {
+        font-family: 'Bebas Neue';
+        src:
+        url('fonts/Bebas_Neue/BebasNeue-Regular.woff2'),
+        format('woff2'),
+        url('fonts/Bebas_Neue/BebasNeue-Regular.woff'),
+        format('woff'),
+        url('fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="licenseBlock">
+        <div class="container">
+            <div class="license-card">
+                <div class="license-card-content">
+                    <div class="license-card-content_select" id="Options">
+                        <div class="option n1">
+                            <input type="radio" id="1" name="license" value="13" onclick="showLicense(this)">
+                            <label for="license1">
+                                License Plan #1 <span class="license-info">$13 per license</span>
+
+                            </label>
+                        </div>
+                        <div class="option n2">
+                            <input type="radio" id="2" name="license" value="23" onclick="showLicense(this)">
+                            <label for="license2">
+                                License Plan #2 <span class="license-info">$22 per license</span>
+
+                            </label>
+                        </div>
+                        <div class="option n3">
+                            <input type="radio" id="3" name="license" value="34" onclick="showLicense(this)">
+                            <label for="license3">
+                                License Plan #3 <span class="license-info">$34 per license</span>
+
+                            </label>
+                        </div>
+                    </div>
+
+                    <span class="line"></span>
+                    <div class="license-card-content_number">
+                        <label for="nLicense">Number of licenses: </label>
+                        <select name="nLicense" id="nLicense" onchange="selectOpt(this.value);">
+                            <option value="1" id="n1">1</option>
+                            <option value="2" id="n2">2</option>
+                            <option value="3" id="n3">3</option>
+                        </select>
+
+                    </div>
+                    <span class="line"></span>
+
+                    <div class="license-card-content_total_submit">
+                        <p class="total_price">Total: $<span id="price">0</span><sup>US</sup></p>
+                        <button class="buy_now" onclick="buyNow()">Buy Now</button>
+                    </div>
+
+                    <div class="license-card-content_bottom">
+                        <div class="selected_plan">
+                            Selected Plan: #<span id="selected" defa>0</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Script's -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var GID;
+        var valor;
+        var valorSel=1;
+        var suma=0;
+        
+        function showLicense(id) {
+            GID=id.id;
+            document.getElementById("selected").innerHTML=GID;
+            valor = id.value;
+            document.getElementById("price").innerHTML=valor*valorSel;
+        }
+        function selectOpt(vlr) {
+            valorSel=vlr
+            if (valor > 0 || valorSel ==1) {
+                suma = valor * valorSel;
+            }
+            console.log(suma)
+            document.getElementById("price").innerHTML=suma;
+        }
+
+        function buyNow() {
+            alert("Thanks for buying.")
+            window.location.reload();
+        }
+    </script>
+    
+</body>
+</html>

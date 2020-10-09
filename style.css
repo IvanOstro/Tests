@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #828282;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+#licenseBlock {
+  background-color: #f8f8f8;
+  border: 10px solid #ebebeb;
+  margin: auto;
+  width: 100%;
+  max-width: 450px;
+}
+
+#licenseBlock .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#licenseBlock .container .license-card {
+  padding: 50px 20px;
+  min-width: 350px;
+  min-height: 360px;
+  margin: auto;
+}
+
+#licenseBlock .container .license-card-content {
+  text-align: center;
+}
+
+#licenseBlock .container .license-card-content_select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5%;
+}
+
+#licenseBlock .container .license-card-content_select .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 55px;
+  border: 0.5px solid transparent;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#licenseBlock .container .license-card-content_select .option:hover {
+  background-color: #ebf4f7;
+  border: 0.5px solid #64a3ba;
+  cursor: pointer;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio]:hover {
+  cursor: pointer;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio]:after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: block;
+  border: 5px solid #ebebeb;
+  border-radius: 100%;
+  position: absolute;
+  visibility: visible;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio]:checked {
+  margin-right: 15px;
+  background: #000 !important;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio]:checked:hover {
+  cursor: pointer;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio]:checked:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+  border: none;
+  background-color: #64a3ba;
+  border-radius: 100%;
+  position: absolute;
+  visibility: visible;
+}
+
+#licenseBlock .container .license-card-content_select .option input[type=radio]:checked:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 5px solid #35658f;
+  border-radius: 100%;
+  position: absolute;
+  visibility: visible;
+}
+
+#licenseBlock .container .license-card-content_select .option label {
+  font-family: 'Bebas Neue';
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-weight: bold;
+  letter-spacing: normal;
+  display: contents;
+}
+
+#licenseBlock .container .license-card-content_select .option label span {
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-left: 30%;
+  text-transform: lowercase;
+  color: #929394;
+}
+
+#licenseBlock .container .license-card-content .line {
+  display: block;
+  height: 1px;
+  margin: auto;
+  width: 100%;
+  background-color: #ebebeb;
+  margin-bottom: 5%;
+}
+
+#licenseBlock .container .license-card-content_number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  margin-bottom: 5%;
+}
+
+#licenseBlock .container .license-card-content_number label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: black;
+}
+
+#licenseBlock .container .license-card-content_number select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
+  background-color: #fff;
+  margin-left: 5%;
+  width: 45px;
+  height: 23px;
+  border: 1px solid #64a3ba;
+  color: #000;
+  padding-left: 5px;
+}
+
+#licenseBlock .container .license-card-content_number #nLicense {
+  border-radius: 2px;
+}
+
+#licenseBlock .container .license-card-content_total_submit .total_price {
+  font-family: Arial;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-weight: bold;
+}
+
+#licenseBlock .container .license-card-content_total_submit .total_price span {
+  color: #64a3ba;
+  font-weight: bold;
+}
+
+#licenseBlock .container .license-card-content_total_submit .total_price sup {
+  color: #64a3ba;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+#licenseBlock .container .license-card-content_total_submit .buy_now {
+  background-color: #33a845;
+  border: none;
+  color: #fff;
+  outline: none;
+  padding: 15px 60px;
+  border-radius: 35px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+#licenseBlock .container .license-card-content_total_submit .buy_now:hover {
+  cursor: pointer;
+}
+
+#licenseBlock .container .license-card-content_bottom {
+  margin-top: 12%;
+}
+
+#licenseBlock .container .license-card-content_bottom .selected_plan {
+  color: #64a3ba;
+}
+/*# sourceMappingURL=style.css.map */
